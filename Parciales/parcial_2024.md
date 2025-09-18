@@ -13,7 +13,7 @@ frase:= 'hola mundoz.'.
 1 to: frase size do: [ :i| 
 	|char|
 	char:=frase at: i.
-	(char = ' ') ifFalse: [
+	(char isLetter) ifTrue: [
 		char:= ((char asInteger) + desp) asCharacter.
 		(char isLetter) 
 		ifTrue: [ frase at: i put: char.]
