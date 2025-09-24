@@ -1,19 +1,18 @@
 " Ingresar 2 polinomios y realizar la suma y el producto de ambos"
-|ec1 ec2 res n m|
+|ec1 ec2 res n|
 
 n:=(UIManager default request: 'ingrese el grado de la ecuacion mas grande') asInteger.
-m:=n.
 
 ec1:= Array new: n withAll: 0.
-ec2:= Array new: m withAll: 0.
-res:= Array new: n.
+ec2:= Array new: n withAll: 0.
+res:= Array new: n withAll: 0.
 
 1 to: n do: [ :i |
-	ec1 at: i put: (UIManager default request: ('ingrese el termino nro: ', i asString)) asInteger.
+	ec1 at: i put: (UIManager default request: ('ingrese el termino nro: ', i asString, ' de la primer ecuacion')) asInteger.
 	 ].
 
-1 to: m do: [ :i |
-	ec2 at: i put: (UIManager default request: ('ingrese el termino nro: ', i asString)) asInteger.
+1 to: n do: [ :i |
+	ec2 at: i put: (UIManager default request: ('ingrese el termino nro: ', i asString, ' de la segunda ecuacion')) asInteger.
 	 ].
 
 1 to: (res size) do: [ :i |
