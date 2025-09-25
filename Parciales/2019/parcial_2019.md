@@ -56,3 +56,33 @@ num:=1.
 	 ].
 ```
 
+
+## 2.
+
+## 3.
+
+## 4. **(40%) Calcule el valor de Pi teniendo en cuenta la serie de Leibniz:**
+
+
+### **$\sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1} = \frac{\pi}{4}$**
+
+
+```st
+"serie de pi"
+
+|serie n|
+
+n:=100000.
+
+serie:=0.
+
+0 to: n do: [:i|
+    serie:= serie + (((1 negated)**i) / ((2*i) + 1))
+    ].
+
+serie:=4*serie.
+
+Transcript show: serie asFloat asString.
+```
+
+
