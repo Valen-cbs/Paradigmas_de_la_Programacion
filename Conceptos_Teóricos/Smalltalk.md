@@ -63,8 +63,8 @@ miDic at: #nombre                 "-> devuelve 'Ana'"
 ## <a name="comparaciones-y-operadores-booleanos"></a>Comparaciones y operadores booleanos
 La diferencia entre igualdad y identidad puede resultar confusa. La revista *The Smalltalk Report* señala que = devuelve true si dos objetos son **iguales** en valor, mientras que == devuelve true si son el **mismo objeto en memoria[\[7\]](https://rmod-files.lille.inria.fr/FreeBooks/TheSmalltalkReport/PDFS/ST/ST05/10WO.PDF#:~:text=%EF%9D%AE%EF%9D%A5%20%EF%9D%AF%EF%9D%A6%20%EF%9D%B4%EF%9D%A8%EF%9D%A5trickier%20concepts%20in,difference%20actually%20mean%20in%20a)**. Para negar la igualdad se utiliza ~= y para negar la identidad ~~. Ejemplos:
 
-'hola' = 'hola'          "true: las cadenas tienen el mismo contenido"\
-'hola' == 'hola'         "false: son dos objetos distintos"\
+(1/2) = (1/2)           "true: las cadenas tienen el mismo contenido"\
+(1/2) == (1/2)         "false: son dos objetos distintos"\
 1 ~~ 2                  "true: 1 y 2 son objetos diferentes"
 ### <a name="operadores-lógicos-y-cortocircuito"></a>Operadores lógicos y cortocircuito
 Las clases True y False definen los mensajes lógicos. Existen dos formas de enviar los operadores AND y OR:
