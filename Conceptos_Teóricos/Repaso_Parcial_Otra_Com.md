@@ -1,5 +1,33 @@
 # Repaso
 
+# Error al usar variables no declaradas en Pharo
+
+En **Pharo**, si usás una variable que **no fue declarada** previamente (por ejemplo, ni como variable temporal `| x |`, ni como variable de instancia, ni como global), el sistema **lanza un error en tiempo de ejecución** del tipo:
+
+```st
+UndeclaredVariable: Variable x is undeclared
+```
+
+👉 Esto ocurre cuando el intérprete intenta evaluar un identificador y no lo encuentra en ningún entorno léxico ni global.  
+👉 Además, Pharo te muestra una ventana de “Undeclared variable” que te permite:
+- **Declararla** como variable temporal.  
+- **Declararla** como variable de instancia.  
+- O **agregarla** como global.
+
+## Ejemplo
+
+```st
+| a |
+a := 10.
+b := a + 5. "b no está declarada"
+```
+
+Cuando se evalúa esa última línea, aparece el error:
+
+```st
+UndeclaredVariable: Variable b is undeclared
+```
+
 ## ¿Cuál es el orden de evaluación de los operadores unarios, binarios y palabra clave?
 
 En Pharo, el orden de evaluación de los mensajes (operadores) es fijo y muy simple. Se evalúan en este orden:
